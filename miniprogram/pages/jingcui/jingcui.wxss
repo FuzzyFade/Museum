@@ -84,7 +84,7 @@
 .button {
   height: 36px;
   width: 36px;
-  margin-left: 22px;
+  margin: 0 15px;
 }
 
 .border {

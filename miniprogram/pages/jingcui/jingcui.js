@@ -1,7 +1,6 @@
 // miniprogram/pages/jingcui/jingcui.js
 const app=getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -40,13 +39,6 @@ Page({
     })
 
   },
-  backward: function () {
-    
-    wx.navigateTo({
-      url: '../cangpin/cangpin',
-    })
-
-  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -56,7 +48,6 @@ Page({
       id:options.idx,
       cont:app.globalData.zhanpin,
       h: wx.getSystemInfoSync().windowHeight,
-      
     })
     // for (var i = 0; i < this.data.cont.length; i++) {
     //   var q = "cont[" + i + "].image"

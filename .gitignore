@@ -13,6 +13,3 @@ $RECYCLE.BIN/
 # Node.js
 node_modules/
  
-# public
-/miniprogram/pages/images
-

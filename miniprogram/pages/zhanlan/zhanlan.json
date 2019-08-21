@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "展览馆"
+  "usingComponents": {
+      "navigationBar": "/components/navigationBar/navigationBar"
+  }
 }
