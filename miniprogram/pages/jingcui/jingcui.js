@@ -10,7 +10,6 @@ Page({
     h:0,
     name:'',
     cont:[],
-
   },
   onPageScroll: function (ev) {
     var _this = this;

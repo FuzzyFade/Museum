@@ -2,17 +2,17 @@
 <navigationBar text="探索中原" />
 <view class="contain">
   <view class="content">
-    <view class="library">
-      <image bindtap="cangbao" class="tip tip1" src="/pages/images/libraryTip.png"></image>
-      <image bindtap="cangbao" class="bird" src="/pages/images/bird.png"></image>
+    <view class="library" bindtap="cangbao">
+      <image class="tip tip1" src="/pages/images/libraryTip.png"></image>
+      <image class="bird" src="/pages/images/bird.png"></image>
     </view>
-    <view class="column">
-      <image bindtap="zhanlan" class="tip tip2" src="/pages/images/museumTip.png"></image>
-      <image bindtap="zhanlan" class="museum" src="/pages/images/museum.png" mode="widthFix"></image>
+    <view class="column" bindtap="zhanlan">
+      <image class="tip tip2" src="/pages/images/museumTip.png"></image>
+      <image class="museum" src="/pages/images/museum.png" mode="widthFix"></image>
     </view>
-    <view class="create">
-      <image bindtap="chuangzuo" class="tip tip3" src="/pages/images/createTip.png"></image>
-      <image bindtap="chuangzuo" class="child" src="/pages/images/child.png"></image>
+    <view class="create" bindtap="chuangzuo">
+      <image class="tip tip3" src="/pages/images/createTip.png"></image>
+      <image class="child" src="/pages/images/child.png"></image>
     </view>
   </view>
   <image class="background" src="/pages/images/home.jpg" />
