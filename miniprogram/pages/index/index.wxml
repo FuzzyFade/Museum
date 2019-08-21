@@ -1,23 +1,19 @@
-<!--index.wxml-->
-
-<view style='width:100%;height:{{h}}px;background-size:100% 100%;' class="contain">
-<text class="title">探索中原\n</text>
-<image bindtap="cangbao" style="width:34px;height:78px;position:absolute;top: 272px;left: 205px;" src="../images/组 53.png" ></image>
-<image bindtap="cangbao" class="bird" src="../images/资源 2.png" ></image>
-<image  src="../images/资源 4.png" mode="aspectFill" style="width:98%;height:317px;position:absolute;top:325px;"></image>
-
-<image bindtap="zhanlan" src="../images/展览馆标注.png" mode="widthFit" style="width:34px;height:73px;right:48pt;position:absolute;top:441px;"></image>
-
-<image bindtap="chuangzuo" src="../images/组 51.png" mode="widthFit" style="width:34px;height:73px;left:28pt;position:absolute;top:437pt;"></image>
-
-<image bindtap="chuangzuo" src="../images/资源 3.png" mode="widthFit" style="width:71px;height:111px;position:absolute;top:410pt;left:55pt;"></image>
-<!-- <image bindtap="bindViewTap" src="../images/1.JPG" mode="widthFit" style="width:34px;height:73px;"></image> -->
-
-
-    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain="true" style="margin-top:30%;"> 开始探索 </button>
-    <block wx:else>
-      
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
- 
+<!-- index.wxml -->
+<navigationBar text="探索中原" />
+<view class="contain">
+  <view class="content">
+    <view class="library">
+      <image bindtap="cangbao" class="tip tip1" src="/pages/images/libraryTip.png"></image>
+      <image bindtap="cangbao" class="bird" src="/pages/images/bird.png"></image>
+    </view>
+    <view class="column">
+      <image bindtap="zhanlan" class="tip tip2" src="/pages/images/museumTip.png"></image>
+      <image bindtap="zhanlan" class="museum" src="/pages/images/museum.png" mode="widthFix"></image>
+    </view>
+    <view class="create">
+      <image bindtap="chuangzuo" class="tip tip3" src="/pages/images/createTip.png"></image>
+      <image bindtap="chuangzuo" class="child" src="/pages/images/child.png"></image>
+    </view>
+  </view>
+  <image class="background" src="/pages/images/home.jpg" />
 </view>

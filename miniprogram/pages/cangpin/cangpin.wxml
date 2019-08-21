@@ -5,9 +5,9 @@
       <view class="button" style="opacity: 0"></view>
       <view class="tit">
         藏宝阁
-        <image class="border" src="../images/border.png" />
+        <image class="border" src="/pages/images/border.png" />
       </view>
-      <image class="button" src="../images/藏品滚动页.png"></image>
+      <image class="button" src="/pages/images/藏品滚动页.png" />
     </view>
     <scroll-view scroll-y="true" style="height:{{(h-170)*2}}rpx;flex: 1;margin-top: 12px;">
       <block wx:for="{{5}}" wx:for-index="k">
@@ -19,5 +19,5 @@
       </block>
     </scroll-view>
   </view>
-  <image class="background" src="../images/bg.png" />
+  <image class="background" src="/pages/images/bg.png" />
 </view>
