@@ -5,41 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id:0,
-    h:0,
-    name:'',
-    cont:[],
+    id: 0,
+    cont: [],
+    handleDetail: false,
+    lastY: 0,
   },
-  onPageScroll: function (ev) {
-    var _this = this;
-    //当滚动的top值最大或者最小时，为什么要做这一步是由于在手机实测小程序的时候会发生滚动条回弹，所以为了解决回弹，设置默认最大最小值   
-    if (ev.scrollTop <= 0) {
-      ev.scrollTop = 0;
-    } else if (ev.scrollTop > wx.getSystemInfoSync().windowHeight) {
-      ev.scrollTop = wx.getSystemInfoSync().windowHeight;
-    }
-    //判断浏览器滚动条上下滚动   
-    if (ev.scrollTop > this.data.scrollTop || ev.scrollTop == wx.getSystemInfoSync().windowHeight) {
-      console.log('向下滚动');
-    } else {
-      console.log('向上滚动');
-    }
-    //给scrollTop重新赋值    
-    setTimeout(function () {
-      _this.setData({
-        scrollTop: ev.scrollTop
-      })
-    }, 0)
+
+  showDetail: function () {
+    this.setData({
+      handleDetail: true
+    })
   },
 
   home: function () {
-
     wx.navigateTo({
       url: '../index/index',
     })
-
   },
-  
+
+  all: function () {
+    wx.navigateTo({
+      url: '../cangpin/cangpin',
+    })
+  },
+
+  handletouchend: function(event) {
+    let currentY = event.changedTouches[0].pageY
+    if ((currentY - this.data.lastY) < 0){
+      console.log('上滑')
+      this.showDetail()
+    }
+    this.setData({
+      lastY: currentY
+    })
+  },
+
+  handletouchtart: function(event) {
+    this.setData({
+      lastY: event.changedTouches[0].pageY
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -49,23 +54,7 @@ Page({
       cont:app.globalData.zhanpin,
       h: wx.getSystemInfoSync().windowHeight,
     })
-    // for (var i = 0; i < this.data.cont.length; i++) {
-    //   var q = "cont[" + i + "].image"
-    //   wx.cloud.downloadFile({
-    //     fileID: this.data.cont[i].image,
-    //     success: res => {
-    //       // get temp file path
-
-    //       that.setData({
-    //         [q]: res.tempFilePath
-    //       })
-
-    //     },
-    //   })
-    // }
-    
-
-
+    console.log(this.data.cont)
   },
 
   /**
@@ -100,7 +89,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
   },
 
   /**

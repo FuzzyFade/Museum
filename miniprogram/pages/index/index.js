@@ -10,6 +10,8 @@ Page({
     logo:'',
     h:0,
   },
+
+
   //事件处理函数
   chuangzuo: function () {
     wx.navigateTo({

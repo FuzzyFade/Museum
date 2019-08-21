@@ -1,22 +1,39 @@
 <navigationBar text="藏品精粹" />
-<view class="contain">
+<view catchtouchstart="handletouchtart" catchtouchend="handletouchend" class="contain">
   <view class="content">
     <view class="head">
-      <view class="button" style="opacity: 0"></view>
+      <image class="button" style="opacity: 0" />
       <view class="tit">
         <view class="titText">{{cont[id].name}}</view>
         <image class="border" src="/pages/images/border.png" />
       </view>
-      <image class="button" src="/pages/images/all.png" />
+      <image bindtap="all" class="button" src="/pages/images/all.png" />
+      <image style="display: none" class="littleImg" src="{{cont[id].image}}" width="58px" />
     </view>
-    <image class="itemsShow" src="{{cont[id].image}}" width="233px" mode="widthFix" />
-    <view class="outlineText">
-      <text class="intro">{{cont[id].size}}</text>
-      <text class="dyna">{{cont[id].dynasty}}</text>
-    </view>
-    <view class="bottomItems">
-      <image bindtap="home" src="../images/to-home.png" style="width:156rpx;height:156rpx" />
-      <image class="more" src="/pages/images/more-arrow.svg" />
+    <image style="display: {{!handleDetail ? null : 'none'}}" class="itemsShow" src="{{cont[id].image}}" width="233px" mode="widthFix" />
+    <scroll-view style="height: {{handleDetail ? '2000px' : null}}" scroll-y="{{handleDetail}}">
+      <view class="outlineText">
+        <text class="intro">{{cont[id].size}}</text>
+        <text class="dyna">{{cont[id].dynasty}}</text>
+      </view>
+      <view class="detailText" style="display: {{handleDetail ? null : 'none'}};height: 2500px">
+        <view class="detailTitle">
+          <image class="cloud" src="/pages/images/cloud.png" />
+          深度解读
+          <image class="cloud" style="transform: rotateY(180deg);" src="/pages/images/cloud.png" />
+        </view>
+        <view class="detailContent">
+          {{cont[id].detail}}
+        </view>
+        <view class="detailTitle">
+          <image class="cloud" style="transform: rotateX(180deg);" src="/pages/images/cloud.png" />
+          <image class="cloud" style="transform: rotateX(180deg) rotateY(180deg)" src="/pages/images/cloud.png" />
+        </view>
+      </view>
+    </scroll-view>
+    <view style="display: {{!handleDetail ? null : 'none'}}" class="bottomItems">
+      <image bindtap="home" src="/pages/images/to-home.png" style="width:156rpx;height:156rpx" />
+      <image bindtap="showDetail" class="more" src="/pages/images/more-arrow.svg" />
     </view>
   </view>
   <image class="background" src="/pages/images/bg.png" />
