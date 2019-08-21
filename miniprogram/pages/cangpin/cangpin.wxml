@@ -1,0 +1,23 @@
+<navigationBar text="藏宝阁" />
+<view class="contain">
+  <view class="content">
+    <view class="head">
+      <view class="button" style="opacity: 0"></view>
+      <view class="tit">
+        藏宝阁
+        <image class="border" src="../images/border.png" />
+      </view>
+      <image class="button" src="../images/藏品滚动页.png"></image>
+    </view>
+    <scroll-view scroll-y="true" style="height:{{(h-170)*2}}rpx;flex: 1;margin-top: 12px;">
+      <block wx:for="{{5}}" wx:for-index="k">
+        <view style="width:90%;display:flex;top:{{k*320}}rpx;left:56rpx;position:absolute;">
+          <block wx:for="{{3}}" wx:for-index="j" wx:for-item="item_k">
+            <image id="{{k*3+j}}" lazy-load="true" bindtap="detail" src="{{zhanpin[k*3+j].image}}" style="height:272rpx;width:176rpx;margin-left:30rpx;"></image>
+          </block>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <image class="background" src="../images/bg.png" />
+</view>

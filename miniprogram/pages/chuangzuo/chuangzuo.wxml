@@ -1,0 +1,11 @@
+<!--miniprogram/pages/chuangzuo/chuangzuo.wxml-->
+<view class="back" bindtap="backward"></view> 
+<view style='width:100%;height:{{h*2}}rpx;background-size:100% 100%;'  class="contain">
+
+<text class="title">创作台\n</text>
+<view style="position:absolute;top:150rpx;">
+<image class="photo" src="{{pic}}" bindtap="takePic"></image>
+<button class="create" bindtap="start">制作我的专属文物合照:)</button>
+</view>
+
+</view>

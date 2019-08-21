@@ -1,0 +1,53 @@
+<!--pages/zhanlan.wxml-->
+
+<view style='width:100%;height:1500rpx;background-size:100% 100%;' class="contain">
+  <text class="title">展览馆\n</text>
+  <view class="back" bindtap="previous"></view>
+  <!--<view style='width:100%;height:1500rpx;background-size:100% 100%;top:20%;position:absolute;'                   class="contain2"></view>-->
+  <block wx:if="{{exhibitState}}">
+    <image src="../images/联合1.png" class="exhibit-container"></image>
+    <view class="exhibit">正在展览</view>
+    <image class="review-icon" src="../images/展览回顾.png" bindtap="review"></image>
+
+    <view class="slide-view">
+      <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{false}}" 
+        interval="{{interval}}" duration="{{duration}}" circular="{{true}}" next-margin="100" bindchange="onItemChange">
+        <block wx:for="{{imgs}}">
+          <swiper-item class="slide-item" item-id="{{item.index}}">
+            <view class="{{item.index==current?'item-container':'item-container-un'}}">
+              <image src="{{item.url}}" style='width:100%;height:77%;border-top-left-radius:15px;border-top-right-radius:15px'></image>
+              <view style="margin-top:4px;width:80%;margin-left:10%;">
+              <text class="item-name">{{item.name}}</text>
+              </view>
+              <view style="margin-top:25px;width:80%;margin-left:10%;">
+              <text class="item-info">{{item.time}}</text>
+              </view>
+              <view style="width:80%;margin-left:10%;">
+              <text class="item-info">{{item.location}}</text>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </block>
+
+  <block wx:if="{{reviewState}}">
+    <image src="../images/联合2.png" class="review-container"></image>
+    <view class="review">展览回顾</view>
+    <image class="exhibit-icon" src="../images/正在展览.png" bindtap="exhibit"></image>
+  </block>
+  <!--<view class="subtitle" wx:if="{">正在展览</view>
+  <image class="tag" src="../images/展览回顾.png" bindtap="review"></image>
+  <image class="tag2" src="../images/正在展览.png" bindtap="review2"></image>
+  <view ></view>
+  <view class="subtitle" >展览回顾</view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>-->
+</view>

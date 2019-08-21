@@ -1,0 +1,39 @@
+/* components/navigationBar/navigationBar.wxss */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.title-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.capsule {
+  margin-left: 10px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.capsule image {
+  width: 7px;
+  height: 12px;
+}
+.title {
+  color: black;
+  position: absolute;
+  top: 6px;
+  left: 104px;
+  right: 104px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

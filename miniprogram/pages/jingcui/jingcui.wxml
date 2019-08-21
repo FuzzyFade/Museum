@@ -1,0 +1,19 @@
+<view style='width:100%;height:{{h*2}}rpx;background-size:100% 100%;' class="contain">
+<view class="back" bindtap="backward"></view>  
+<text class="title">藏品精粹\n</text>
+
+<view class="line" style="position:absolute;left:150rpx;top:205rpx;"></view>
+<view class="tit2"></view>
+<view class="tit">{{cont[id].name}}</view>
+<view class="line" style="position:absolute;left:594rpx;top:205rpx;"></view>
+<image style="position:absolute;left:638rpx;top:230rpx;height:90rpx;width:90rpx;" src="../images/全部藏品.png"></image>
+
+<image src="{{cont[id].image}}" style="width:602rpx;height:930rpx;"></image>
+
+<view class="line2" style="top:1272rpx;left:40rpx;position:absolute;"></view>
+<text class="intro" style="top:1268rpx;left:62rpx;position:absolute;">{{cont[id].size}}</text>
+<text class="dyna" style="top:1368rpx;left:62rpx;position:absolute;width:100%;">{{cont[id].dynasty}}</text>
+<image bindtap="home" src="../images/首页.png" style="width:156rpx;height:156rpx;left:42rpx;top:1434rpx;position:absolute;" ></image>
+
+<view class="more"></view>
+</view>
