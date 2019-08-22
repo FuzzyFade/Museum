@@ -34,10 +34,19 @@
       <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
     </view>
   </view>
-  <block wx:if="{{reviewState}}">
-    <image src="../images/联合2.png" class="review-container"></image>
-    <view class="review">展览回顾</view>
-    <image class="exhibit-icon" src="../images/正在展览.png" bindtap="exhibit"></image>
-  </block>
+  <view class="content" style="margin-top: {{navigationBarHeight}}" wx:if="{{reviewState}}">
+    <view class="choose-bar">
+      <view class="review-button" bindtap="exhibit">
+        <image class="review-icon" src="/pages/images/current.png" />
+      </view>
+      <view class="review">展览回顾</view>
+    </view>
+    <view class="column-list">
+      2333333
+    </view>
+    <view class="bottom-bar">
+      <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
+    </view>
+  </view>
   <image class="background" src="/pages/images/bg.png" />
 </view>

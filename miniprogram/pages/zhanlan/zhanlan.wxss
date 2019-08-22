@@ -22,14 +22,15 @@
 }
 
 .review{
-  position:absolute;
-  right:24%;
-  top:15%;
-  font-size:20px;
-  font-weight:400;
-  line-height:29px;
+  width: 80vw;
+  height: 55px;
+  font-size: 20px;
   color:rgba(255,255,255,1);
-  opacity:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 150px 0 0 0;
+  background:  rgb(144,166,151);
 }
 
 .choose-bar {
@@ -165,4 +166,15 @@
   align-items: center;
   transition: height .5s ease;
   padding: 0 5px;
+}
+
+.column-list{
+  background:  rgb(144,166,151);
+  flex: 1;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 24px 0 24px;
 }
