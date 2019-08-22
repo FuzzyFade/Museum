@@ -2,6 +2,10 @@
 .container {
   align-items: center;
 } 
+page{
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
 .back{
   width: 30rpx; height: 30rpx; 
   border-top: 4rpx solid black; 
@@ -18,11 +22,8 @@
   align-content: center;
   top: 70rpx;
   color: black;
-  font-family: Source Han Serif CN;
-  src: url("../SourceHanSerifCN-Bold.otf");
   font-size: 40rpx;
   position: absolute;
-  font-weight: bold;
 }
 button {
   background: initial;

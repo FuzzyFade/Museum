@@ -4,7 +4,7 @@
   <block wx:if="{{exhibitState}}">
     <image src="../images/联合1.png" class="exhibit-container" />
     <view class="exhibit">正在展览</view>
-    <image class="review-icon" src="../images/展览回顾.png" bindtap="review" />
+    <image class="review-icon" src="../images/review.png" bindtap="review" />
     <view class="slide-view">
       <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{false}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}" next-margin="100" bindchange="onItemChange">
         <block wx:for="{{imgs}}">

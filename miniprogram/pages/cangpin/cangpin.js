@@ -35,9 +35,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   detail:function(e){
-    var that=this
     wx.navigateTo({
       url: '../jingcui/jingcui?idx='+e.currentTarget.id,
+    })
+  },
+  firstDetail:function(e){
+    wx.navigateTo({
+      url: '../jingcui/jingcui?idx=0',
     })
   },
   onReady: function () {
