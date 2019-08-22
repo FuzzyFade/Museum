@@ -1,6 +1,5 @@
 // miniprogram/pages/chuangzuo/chuangzuo.js
-const db = wx.cloud.database()
-const app =getApp()
+const app = getApp()
 Page({
 
   /**
@@ -18,17 +17,8 @@ Page({
   onLoad: function (options) {
     var that=this
     that.setData({
-      h: wx.getSystemInfoSync().windowHeight,
-    })
-
-    db.collection("cangbaoge").get({
-      success:res => {
-        that.setData({
-          zhanpin:res.data,
-          len:res.data.length
-        })
-        app.globalData.zhanpin = that.data.zhanpin
-      }
+      zhanpin:app.globalData.zhanpin,
+      len:app.globalData.zhanpin.length
     })
   },
 

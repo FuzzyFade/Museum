@@ -9,12 +9,12 @@
 }
 
 .content{
-  width:294px;
-  height:602px;
+  width: 294px;
+  height: 602px;
   background:rgba(255,255,255,1);
-  box-shadow:0px 5px 10px rgba(76,114,89,1);
-  opacity:0.8;
-  border-radius:24px;
+  box-shadow: 0px 5px 10px rgba(76,114,89,1);
+  opacity: .8;
+  border-radius: 24px;
 }
 
 .review{
@@ -22,7 +22,6 @@
   right:24%;
   top:15%;
   font-size:20px;
-  font-family:Source Han Serif CN;
   font-weight:400;
   line-height:29px;
   color:rgba(255,255,255,1);
@@ -50,7 +49,6 @@
   left:24%;
   top:15%;
   font-size:20px;
-  font-family:SerifSC;
   font-weight:400;
   line-height:29px;
   color:rgba(255,255,255,1);
@@ -111,14 +109,16 @@
   text-align: center;
 }
 
+.swiper-transition {
+  transition: margin .5s ease, height .5s ease;
+}
+
 .item-name{
   color:rgba(76,114,89,1);
-  font-family:Source Han Serif CN;
   font-size: 14px;
 }
 
 .item-info{
   color:rgba(76,114,89,1);
-  font-family:Source Han Serif CN;
   font-size: 13px;
 }

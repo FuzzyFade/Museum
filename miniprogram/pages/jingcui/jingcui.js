@@ -9,12 +9,19 @@ Page({
     cont: [],
     handleDetail: false,
     lastY: 0,
+    lastX: 0,
     navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 46) + 'px'
   },
 
   showDetail() {
     this.setData({
       handleDetail: true
+    })
+  },
+
+  closeDetail() {
+    this.setData({
+      handleDetail: false
     })
   },
 
@@ -30,19 +37,57 @@ Page({
     })
   },
 
+  next() {
+    const id = parseInt(this.data.id)
+    id <= 13 ?
+    wx.navigateTo({
+      url: `../jingcui/jingcui?idx=${id + 1}`,
+    }) :
+    wx.navigateTo({
+      url: `../jingcui/jingcui?idx=0`,
+    })
+  },
+
+  back() {
+    const id = parseInt(this.data.id)
+    id > 0 ?
+    wx.navigateTo({
+      url: `../jingcui/jingcui?idx=${id - 1}`,
+    }) :
+    wx.navigateTo({
+      url: `../jingcui/jingcui?idx=14`,
+    })
+  },
+
   handletouchend(event) {
+    let currentX = event.changedTouches[0].pageX
     let currentY = event.changedTouches[0].pageY
-    if ((currentY - this.data.lastY) < 0){
-      console.log('上滑')
-      this.showDetail()
+    let xc = currentX - this.data.lastX
+    let yc = currentY - this.data.lastY
+    if (Math.abs(xc) > Math.abs(yc)){
+      if (xc < 0){
+        this.next()
+      }
+      if (xc > 0){
+        this.back()
+      }
+    }else{
+      if (yc < 0){
+        this.showDetail()
+      }
+      if (yc > 0){
+        this.closeDetail()
+      }
     }
     this.setData({
+      lastX: currentX,
       lastY: currentY
     })
   },
 
   handletouchtart(event) {
     this.setData({
+      lastX: event.changedTouches[0].pageX,
       lastY: event.changedTouches[0].pageY
     })
   },
@@ -53,6 +98,5 @@ Page({
       cont:app.globalData.zhanpin,
       h: wx.getSystemInfoSync().windowHeight,
     })
-    console.log(this.data.cont)
   }
 })

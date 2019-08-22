@@ -18,7 +18,7 @@
       width="233px" 
       mode="aspectFit" 
     />
-    <view bindtouchstart="handletouchtart" bindtouchend="handletouchend" >
+    <view catchtouchstart="handletouchtart" catchtouchend="handletouchend" >
       <view class="head" style="display: {{handleDetail ? null : 'none'}}">
         <view class="tit">
           <view class="titText">{{cont[id].name}}</view>

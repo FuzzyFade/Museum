@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const db = wx.cloud.database()
 Page({
   data: {
     userInfo: {},
@@ -24,6 +24,11 @@ Page({
     })
   },
   onLoad: function () {
+    db.collection("cangbaoge").get({
+      success:res => {
+        app.globalData.zhanpin = res.data
+      }
+    })
     var that =this
     this.setData({
       h: wx.getSystemInfoSync().windowHeight
@@ -66,7 +71,7 @@ Page({
   },
   cangbao:function(e){
     wx.navigateTo({
-      url: '../cangpin/cangpin',
+      url: '../jingcui/jingcui?idx=0',
     })
   },
   getUserInfo: function (e) {
