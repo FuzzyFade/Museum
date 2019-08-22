@@ -2,15 +2,15 @@
 <navigationBar text="探索中原" />
 <view class="contain">
   <view class="content">
-    <view class="library" bindtap="cangbao">
+    <view hover-class="active" class="library transition" bindtap="cangbao">
       <image class="tip tip1" src="/pages/images/libraryTip.png"></image>
       <image class="bird" src="/pages/images/bird.png"></image>
     </view>
-    <view class="column" bindtap="zhanlan">
+    <view hover-class="active" class="column transition" bindtap="zhanlan">
       <image class="tip tip2" src="/pages/images/museumTip.png"></image>
       <image class="museum" src="/pages/images/museum.png" mode="widthFix"></image>
     </view>
-    <view class="create" bindtap="chuangzuo">
+    <view hover-class="active" class="create transition" bindtap="chuangzuo">
       <image class="tip tip3" src="/pages/images/createTip.png"></image>
       <image class="child" src="/pages/images/child.png"></image>
     </view>

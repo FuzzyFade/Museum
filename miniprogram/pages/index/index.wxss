@@ -1,5 +1,4 @@
 /**index.wxss**/
-
 .contain{
   position: absolute;
   top: 0;

@@ -1,4 +1,11 @@
 /**app.wxss**/
+.active {
+  transform: scale(.91);
+}
+.transition {
+  transition: transform .2s ease;
+}
+
 .container {
   align-items: center;
 } 

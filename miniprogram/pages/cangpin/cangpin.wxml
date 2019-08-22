@@ -7,13 +7,17 @@
         藏宝阁
         <image class="border" src="/pages/images/border.png" />
       </view>
-      <image bindtap="firstDetail" class="button" src="/pages/images/swiper.png" />
+      <view hover-class="active" class="transition">
+        <image class="button" bindtap="firstDetail" src="/pages/images/swiper.png" />
+      </view>
     </view>
     <scroll-view scroll-y="true" style="height:{{(h-170)*2}}rpx;flex: 1;margin-top: 12px;">
       <block wx:for="{{5}}" wx:for-index="k">
         <view style="width:90%;display:flex;top:{{k*320}}rpx;left:56rpx;position:absolute;">
-          <block wx:for="{{3}}" wx:for-index="j" wx:for-item="item_k">
-            <image id="{{k*3+j}}" lazy-load="true" bindtap="detail" src="{{zhanpin[k*3+j].image}}" style="height:272rpx;width:176rpx;margin-left:30rpx;"></image>
+          <block class="transition" wx:for="{{3}}" wx:for-index="j" wx:for-item="item_k">
+            <view hover-class="active" class="transition">
+              <image hover-class="active" id="{{k*3+j}}" lazy-load="true" bindtap="detail" src="{{zhanpin[k*3+j].image}}" style="height:272rpx;width:176rpx;margin-left:30rpx;"></image>
+            </view>
           </block>
         </view>
       </block>

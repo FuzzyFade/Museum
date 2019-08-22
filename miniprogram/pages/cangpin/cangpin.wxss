@@ -9,6 +9,10 @@
     overflow: hidden;
 }
 
+.transition {
+    transition: transform .2s ease;
+}
+
 .content {
     position: absolute;
     top: 0;
