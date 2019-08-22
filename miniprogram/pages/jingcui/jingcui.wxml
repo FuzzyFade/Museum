@@ -18,28 +18,30 @@
       width="233px" 
       mode="aspectFit" 
     />
-    <view catchtouchstart="handletouchtart" catchtouchend="handletouchend" >
+    <view>
       <view class="head" style="display: {{handleDetail ? null : 'none'}}">
         <view class="tit">
           <view class="titText">{{cont[id].name}}</view>
           <image class="border" src="/pages/images/border.png" />
         </view>
-        <image class="littleImg" src="{{cont[id].image}}" width="58px" mode="aspectFit" />
+        <image bindtap="closeDetail" class="littleImg" src="{{cont[id].image}}" width="58px" mode="aspectFit" />
       </view>
-      <view class="outlineText">
-        <text class="intro">{{cont[id].size}}</text>
-        <text class="dyna">{{cont[id].dynasty}}</text>
-      </view>
-      <view class="detailText" style="display: {{handleDetail ? null : 'none'}}">
-        <view class="detailTitle">
-          <image class="cloud" src="/pages/images/cloud.png" />
-          深度解读
-          <image class="cloud" style="transform: rotateY(180deg);" src="/pages/images/cloud.png" />
+      <view>
+        <view class="outlineText">
+          <text class="intro">{{cont[id].size}}</text>
+          <text class="dyna">{{cont[id].dynasty}}</text>
         </view>
-        <view class="detailContent">{{cont[id].detail}}</view>
-        <view class="detailTitle">
-          <image class="cloud" style="transform: rotateX(180deg);" src="/pages/images/cloud.png" />
-          <image class="cloud" style="transform: rotateX(180deg) rotateY(180deg)" src="/pages/images/cloud.png" />
+        <view class="detailText" style="display: {{handleDetail ? null : 'none'}}">
+          <view class="detailTitle">
+            <image class="cloud" src="/pages/images/cloud.png" />
+            深度解读
+            <image class="cloud" style="transform: rotateY(180deg);" src="/pages/images/cloud.png" />
+          </view>
+          <view class="detailContent">{{cont[id].detail}}</view>
+          <view class="detailTitle">
+            <image class="cloud" style="transform: rotateX(180deg);" src="/pages/images/cloud.png" />
+            <image class="cloud" style="transform: rotateX(180deg) rotateY(180deg)" src="/pages/images/cloud.png" />
+          </view>
         </view>
       </view>
     </view>

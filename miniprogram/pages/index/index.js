@@ -29,15 +29,18 @@ Page({
         app.globalData.zhanpin = res.data
       }
     })
-    var that =this
+    db.collection("zhanlan").get({
+      success:res => {
+        app.globalData.list = res.data
+      }
+    })
     this.setData({
       h: wx.getSystemInfoSync().windowHeight
     })
-
     wx.cloud.downloadFile({
       fileID: 'cloud://henanmuseum-y6gep.6865-henanmuseum-y6gep/logo.png',
       success:function(res){
-        that.setData({
+        this.setData({
           logo:res.tempFilePath
         })
       }

@@ -75,9 +75,6 @@ Page({
       if (yc < 0){
         this.showDetail()
       }
-      if (yc > 0){
-        this.closeDetail()
-      }
     }
     this.setData({
       lastX: currentX,

@@ -1,7 +1,8 @@
 //app.js
 App({
   globalData: {
-    zhanpin:[]
+    zhanpin:[],
+    list:[],
   },
   onLaunch: function () {
     if (!wx.cloud) {
