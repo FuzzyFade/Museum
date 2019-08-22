@@ -1,41 +1,40 @@
 <navigationBar text="藏品精粹" />
-<view catchtouchstart="handletouchtart" catchtouchend="handletouchend" class="contain">
-  <view class="content">
-    <view class="head">
-      <image style="display: {{!handleDetail ? null : 'none'}};opacity: 0" class="button" />
+<view bindtouchstart="handletouchtart" bindtouchend="handletouchend" class="contain">
+  <view class="content" style="overflow-y: {{handleDetail ? 'auto': 'hidden'}}">
+    <view class="head" style="display: {{!handleDetail ? null : 'none'}}">
+      <image style="opacity: 0" class="button" />
       <view class="tit">
         <view class="titText">{{cont[id].name}}</view>
         <image class="border" src="/pages/images/border.png" />
       </view>
-      <image style="display: {{!handleDetail ? null : 'none'}}" bindtap="all" class="button" src="/pages/images/all.png" />
-      <image style="display: {{handleDetail ? null : 'none'}}" class="littleImg" src="{{cont[id].image}}" width="58px" mode="aspectFit" />
+      <image  bindtap="all" class="button" src="/pages/images/all.png" />
     </view>
-    <image 
-      class="{{handleDetail ? 'itemsShowAnimate' : 'itemsShow'}}" 
-      src="{{cont[id].image}}" 
-      width="233px" 
-      mode="widthFix" 
-    />
-    <scroll-view style="height: {{handleDetail ? '2000px' : null}}" scroll-y="{{handleDetail}}">
+    <image class="{{handleDetail ? 'itemsShowAnimate' : 'itemsShow'}}" src="{{cont[id].image}}" width="233px" mode="widthFix" />
+    <view>
+      <view class="head" style="display: {{handleDetail ? null : 'none'}}">
+        <view class="tit">
+          <view class="titText">{{cont[id].name}}</view>
+          <image class="border" src="/pages/images/border.png" />
+        </view>
+        <image class="littleImg" src="{{cont[id].image}}" width="58px" mode="aspectFit" />
+      </view>
       <view class="outlineText">
         <text class="intro">{{cont[id].size}}</text>
         <text class="dyna">{{cont[id].dynasty}}</text>
       </view>
-      <view class="detailText" style="display: {{handleDetail ? null : 'none'}};height: 2500px">
+      <view class="detailText" style="display: {{handleDetail ? null : 'none'}}">
         <view class="detailTitle">
           <image class="cloud" src="/pages/images/cloud.png" />
           深度解读
           <image class="cloud" style="transform: rotateY(180deg);" src="/pages/images/cloud.png" />
         </view>
-        <view class="detailContent">
-          {{cont[id].detail}}
-        </view>
+        <view class="detailContent">{{cont[id].detail}}</view>
         <view class="detailTitle">
           <image class="cloud" style="transform: rotateX(180deg);" src="/pages/images/cloud.png" />
           <image class="cloud" style="transform: rotateX(180deg) rotateY(180deg)" src="/pages/images/cloud.png" />
         </view>
       </view>
-    </scroll-view>
+    </view>
     <view class="{{!handleDetail ? 'bottomItems' : 'bottomItemsAnimate'}}">
       <image bindtap="home" src="/pages/images/to-home.png" style="width:156rpx;height:156rpx" />
       <image bindtap="showDetail" class="more" src="/pages/images/more-arrow.svg" />
