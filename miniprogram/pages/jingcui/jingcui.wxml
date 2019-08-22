@@ -2,15 +2,20 @@
 <view catchtouchstart="handletouchtart" catchtouchend="handletouchend" class="contain">
   <view class="content">
     <view class="head">
-      <image class="button" style="opacity: 0" />
+      <image style="display: {{!handleDetail ? null : 'none'}};opacity: 0" class="button" />
       <view class="tit">
         <view class="titText">{{cont[id].name}}</view>
         <image class="border" src="/pages/images/border.png" />
       </view>
-      <image bindtap="all" class="button" src="/pages/images/all.png" />
-      <image style="display: none" class="littleImg" src="{{cont[id].image}}" width="58px" />
+      <image style="display: {{!handleDetail ? null : 'none'}}" bindtap="all" class="button" src="/pages/images/all.png" />
+      <image style="display: {{handleDetail ? null : 'none'}}" class="littleImg" src="{{cont[id].image}}" width="58px" mode="aspectFit" />
     </view>
-    <image style="display: {{!handleDetail ? null : 'none'}}" class="itemsShow" src="{{cont[id].image}}" width="233px" mode="widthFix" />
+    <image 
+      class="{{handleDetail ? 'itemsShowAnimate' : 'itemsShow'}}" 
+      src="{{cont[id].image}}" 
+      width="233px" 
+      mode="widthFix" 
+    />
     <scroll-view style="height: {{handleDetail ? '2000px' : null}}" scroll-y="{{handleDetail}}">
       <view class="outlineText">
         <text class="intro">{{cont[id].size}}</text>
@@ -31,7 +36,7 @@
         </view>
       </view>
     </scroll-view>
-    <view style="display: {{!handleDetail ? null : 'none'}}" class="bottomItems">
+    <view class="{{!handleDetail ? 'bottomItems' : 'bottomItemsAnimate'}}">
       <image bindtap="home" src="/pages/images/to-home.png" style="width:156rpx;height:156rpx" />
       <image bindtap="showDetail" class="more" src="/pages/images/more-arrow.svg" />
     </view>

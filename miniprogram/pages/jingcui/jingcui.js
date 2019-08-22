@@ -11,25 +11,25 @@ Page({
     lastY: 0,
   },
 
-  showDetail: function () {
+  showDetail() {
     this.setData({
       handleDetail: true
     })
   },
 
-  home: function () {
+  home() {
     wx.navigateTo({
       url: '../index/index',
     })
   },
 
-  all: function () {
+  all() {
     wx.navigateTo({
       url: '../cangpin/cangpin',
     })
   },
 
-  handletouchend: function(event) {
+  handletouchend(event) {
     let currentY = event.changedTouches[0].pageY
     if ((currentY - this.data.lastY) < 0){
       console.log('上滑')
@@ -40,68 +40,18 @@ Page({
     })
   },
 
-  handletouchtart: function(event) {
+  handletouchtart(event) {
     this.setData({
       lastY: event.changedTouches[0].pageY
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+
+  onLoad(options) {
     this.setData({
       id:options.idx,
       cont:app.globalData.zhanpin,
       h: wx.getSystemInfoSync().windowHeight,
     })
     console.log(this.data.cont)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-  
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })
