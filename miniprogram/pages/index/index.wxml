@@ -15,5 +15,5 @@
       <image class="child" src="/pages/images/child.png"></image>
     </view>
   </view>
-  <image class="background" src="/pages/images/home.jpg" />
+  <image class="background" src="/pages/images/home.png" />
 </view>
