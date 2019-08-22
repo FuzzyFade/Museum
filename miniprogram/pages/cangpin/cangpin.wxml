@@ -1,7 +1,7 @@
 <navigationBar text="藏宝阁" />
 <view class="contain">
   <view class="content">
-    <view class="head">
+    <view class="head" style="margin-top: {{navigationBarHeight}}">
       <view class="button" style="opacity: 0"></view>
       <view class="tit">
         藏宝阁

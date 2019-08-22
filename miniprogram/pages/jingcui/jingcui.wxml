@@ -1,6 +1,6 @@
 <navigationBar text="藏品精粹" />
 <view bindtouchstart="handletouchtart" bindtouchend="handletouchend" class="contain">
-  <view class="content" style="overflow-y: {{handleDetail ? 'auto': 'hidden'}}">
+  <view class="content" style="overflow-y: {{handleDetail ? 'auto': 'hidden'}};margin-top: {{navigationBarHeight}}">
     <view class="head" style="display: {{!handleDetail ? null : 'none'}}">
       <image style="opacity: 0" class="button" />
       <view class="tit">
@@ -9,7 +9,12 @@
       </view>
       <image  bindtap="all" class="button" src="/pages/images/all.png" />
     </view>
-    <image class="{{handleDetail ? 'itemsShowAnimate' : 'itemsShow'}}" src="{{cont[id].image}}" width="233px" mode="widthFix" />
+    <image 
+      class="{{handleDetail ? 'itemsShowAnimate' : 'itemsShow'}}" 
+      src="{{cont[id].image}}" 
+      width="233px" 
+      mode="aspectFit" 
+    />
     <view>
       <view class="head" style="display: {{handleDetail ? null : 'none'}}">
         <view class="tit">

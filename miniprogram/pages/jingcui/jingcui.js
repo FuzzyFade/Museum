@@ -9,6 +9,7 @@ Page({
     cont: [],
     handleDetail: false,
     lastY: 0,
+    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 46) + 'px'
   },
 
   showDetail() {
