@@ -1,18 +1,22 @@
 // miniprogram/pages/detail/detail.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cont: [],
+    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 48) + 'px',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    this.setData({
+      cont: app.globalData.list[options.idx],
+    })
   },
 
   /**

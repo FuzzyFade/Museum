@@ -1,2 +1,7 @@
-<!--miniprogram/pages/detail/detail.wxml-->
-<text>miniprogram/pages/detail/detail.wxml</text>
+<navigationBar text="展览详情" />
+<view class="contain">
+  <view class="content" style="margin-top: {{navigationBarHeight}}">
+    {{cont.name}}
+  </view>
+  <image class="background" src="/pages/images/bg.png" />
+</view>

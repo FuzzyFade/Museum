@@ -17,6 +17,7 @@ miniprograme
 |     |- cangpin.wxss //样式
 |  |- jingcui (藏品详细)
 |  |- zhanlan (展览)
+|  |- detail (展览详情)
 |  |- chuangzuo (创作台)
 |  |- journey (制作之旅)
 |  |- share (分享)
@@ -30,7 +31,7 @@ miniprograme
 ## Pages list
 
 + [x] 藏品阁&藏品详细 ( over )
-+ [x] 展览 ( 待测... )
++ [ ] 展览 ( 待测... )
 + [ ] 创作台 ( await )
 
 
@@ -40,5 +41,6 @@ miniprograme
 + [x] 展览回顾
 + [x] 优化藏品阁
 + [x] 优化choose-bar样式
++ [ ] 展览详情
 + [ ] 创作台 nav-bar 替换
 + [ ] 创作台 base64 替换
