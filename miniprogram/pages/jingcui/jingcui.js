@@ -10,7 +10,7 @@ Page({
     handleDetail: false,
     lastY: 0,
     lastX: 0,
-    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 46) + 'px'
+    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 48) + 'px',
   },
 
   showDetail() {

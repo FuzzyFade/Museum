@@ -19,6 +19,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 80px;
+  overflow: hidden;
 }
 
 .select-bar {
@@ -214,7 +215,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 28px 24px 0 24px;
+  padding: 28px 0;
 }
 
 .review-item {
@@ -246,10 +247,22 @@
 }
 
 .review-title {
-  width:173px;
-  height:84px;
+  margin-top: 12px; 
+  width: 173px;
+  height: 84px;
   font-size:18px;
   font-weight:400;
   line-height:26px;
   color:rgba(59,81,66,.86);
+  overflow: hidden;
+}
+
+.review-description{
+  width: 193px;
+  height: 41px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color:rgba(59,81,66,1);
+  opacity:1;
 }

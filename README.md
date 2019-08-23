@@ -30,15 +30,15 @@ miniprograme
 ## Pages list
 
 + [x] 藏品阁&藏品详细 ( over )
-+ [ ] 展览 ( construction... )
++ [x] 展览 ( 待测... )
 + [ ] 创作台 ( await )
 
 
 ## Todo list
 
 + [x] 正在展览
-+ [ ] 展览回顾
-+ [ ] 优化藏品阁
-+ [ ] 优化choose-bar样式
++ [x] 展览回顾
++ [x] 优化藏品阁
++ [x] 优化choose-bar样式
 + [ ] 创作台 nav-bar 替换
 + [ ] 创作台 base64 替换

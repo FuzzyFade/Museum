@@ -8,7 +8,7 @@ Page({
   data: {
     zhanpin:[],
     len:0,
-    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 46) + 'px'
+    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 48) + 'px',
   },
 
   /**

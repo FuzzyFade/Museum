@@ -31,11 +31,8 @@
         </swiper-item>
       </view>
     </swiper>
-    <view class="bottom-bar">
-      <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
-    </view>
   </view>
-  <view class="content" style="margin-top: {{navigationBarHeight}}" wx:if="{{reviewState}}">
+  <view class="content" style="overflow: auto;margin-top: {{navigationBarHeight}}" wx:if="{{reviewState}}">
     <view class="select-bar">
       <view class="review-button" bindtap="exhibit">
         <image class="review-icon" src="/pages/images/current.png" />
@@ -50,12 +47,20 @@
           <view class="review-title">
             {{item.name}}
           </view>
+          <view class="review-description">
+            <view>
+              {{item.time}}
+            </view>
+            <view>
+              {{item.location}}
+            </view>
+          </view>
         </view>
       </view>
     </view>
-    <view class="bottom-bar">
-      <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
-    </view>
+  </view>
+  <view class="bottom-bar">
+    <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
   </view>
   <image class="background" src="/pages/images/bg.png" />
 </view>

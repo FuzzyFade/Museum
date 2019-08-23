@@ -3,7 +3,7 @@ const db = wx.cloud.database()
 const app = getApp()
 Page({
   data: {
-    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 46) + 'px',
+    navigationBarHeight: (wx.getSystemInfoSync().statusBarHeight + 48) + 'px',
     width: wx.getSystemInfoSync().windowWidth,
     list: [],
     indicatorDots: false,
