@@ -21,22 +21,10 @@
   margin-top: 80px;
 }
 
-.review{
-  width: 80vw;
-  height: 55px;
-  font-size: 20px;
-  color:rgba(255,255,255,1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 150px 0 0 0;
-  background:  rgb(144,166,151);
-}
-
-.choose-bar {
+.select-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   height: 55px;
 }
 
@@ -54,16 +42,66 @@
   height: 36px;
 }
 
-.exhibit{
-  width: 80vw;
+.kind-text-exhibit {
+  position: absolute;
+  width: 70vw;
   height: 55px;
-  font-size: 20px;
-  color:rgba(255,255,255,1);
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
-  border-radius: 0 150px 0 0;
-  background:  rgb(144,166,151);
+  color: #fff;
+  font-size: 20px;
+  z-index: 11111;
+}
+
+.kind-text-review {
+  position: absolute;
+  right: 0;
+  width: 70vw;
+  height: 55px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  z-index: 11111;
+}
+
+
+.exhibit{
+  width: 70vw;
+  height: 0;
+  border-right: 10vw solid transparent;
+  border-bottom: 44px solid rgb(144,166,151);
+}
+
+.review{
+  width: 70vw;
+  height: 0;
+  border-left: 10vw solid transparent;
+  border-bottom: 44px solid rgb(144,166,151);
+}
+
+.review:after{
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  width: 72vw;
+  height: 0;
+  border-top-left-radius: 32px;
+  border-bottom: 55px solid rgb(144,166,151);
+}
+
+.exhibit:after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 72vw;
+  height: 0;
+  border-top-right-radius: 32px;
+  border-bottom: 55px solid rgb(144,166,151);
 }
 
 .review-container{
@@ -177,4 +215,41 @@
   justify-content: center;
   align-items: center;
   padding: 28px 24px 0 24px;
+}
+
+.review-item {
+  width: 326px;
+  height: 150px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 12px 13px rgba(76,114,89,.6);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review-img {
+  width: 121px;
+  height: 150px;
+}
+
+.review-text {
+  padding: 14px;
+  height: 150px;
+  width: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.review-title {
+  width:173px;
+  height:84px;
+  font-size:18px;
+  font-weight:400;
+  line-height:26px;
+  color:rgba(59,81,66,.86);
 }

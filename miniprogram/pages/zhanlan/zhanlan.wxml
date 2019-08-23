@@ -2,8 +2,9 @@
 <navigationBar text="展览馆" />
 <view class="contain">
   <view class="content" style="margin-top: {{navigationBarHeight}}" wx:if="{{exhibitState}}">
-    <view class="choose-bar">
-      <view class="exhibit">正在展览</view>
+    <view class="select-bar">
+      <view class="kind-text-exhibit">正在展览</view>
+      <view class="exhibit"></view>
       <view class="review-button" bindtap="review">
         <image class="review-icon" src="/pages/images/review.png" />
       </view>
@@ -35,14 +36,22 @@
     </view>
   </view>
   <view class="content" style="margin-top: {{navigationBarHeight}}" wx:if="{{reviewState}}">
-    <view class="choose-bar">
+    <view class="select-bar">
       <view class="review-button" bindtap="exhibit">
         <image class="review-icon" src="/pages/images/current.png" />
       </view>
-      <view class="review">展览回顾</view>
+      <view class="kind-text-review ">展览回顾</view>
+      <view class="review"></view>
     </view>
     <view class="column-list">
-      2333333
+      <view class="review-item" wx:for="{{list}}">
+        <image class="review-img" src="{{item.img}}"/>
+        <view class="review-text">
+          <view class="review-title">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
     </view>
     <view class="bottom-bar">
       <image bindtap="home" src="/pages/images/to-home.png" class="to-home"/>
