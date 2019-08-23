@@ -19,8 +19,8 @@
       bindchange="onItemChange" 
     >
       <view wx:for="{{list}}" >
-        <swiper-item id="{{index}}" bindtap="detail" class="slide-item" item-id="{{index}}" style="left: {{(width - 314)/2}}px">
-          <view class="swiper-transition {{index == current ? 'item-container' : 'item-container-un'}}">
+        <swiper-item class="slide-item" item-id="{{index}}" style="left: {{(width - 314)/2}}px">
+          <view id="{{index}}" bindtap="detail"  class="swiper-transition {{index == current ? 'item-container' : 'item-container-un'}}">
             <image src="{{item.img}}" class="picture" mode="aspectFill" />
             <view class="show-text" style="height: {{index == current ? 120 : 71}}px">
               <text class="item-name">{{item.name}}</text>
@@ -41,8 +41,7 @@
       <view class="review"></view>
     </view>
     <view class="column-list">
-      <view class="review-item" wx:for="{{list}}">
-        <view id="{{index}}" bindtap="detail">
+      <view id="{{index}}" bindtap="detail" class="review-item" wx:for="{{list}}">
           <image class="review-img" src="{{item.img}}"/>
           <view class="review-text">
             <view class="review-title">
@@ -57,7 +56,6 @@
               </view>
             </view>
           </view>
-        </view>
       </view>
     </view>
   </view>

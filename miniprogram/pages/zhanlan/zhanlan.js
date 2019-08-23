@@ -18,7 +18,7 @@ Page({
 
   detail:function(e){
     wx.navigateTo({
-      url: '../detail/detail?idx='+e.currentTarget.id,
+      url: '../detail/detail?idx='+ e.currentTarget.id,
     })
   },
 
