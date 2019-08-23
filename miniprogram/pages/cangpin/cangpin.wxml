@@ -4,7 +4,7 @@
     <view class="head">
       <view class="button" style="opacity: 0"></view>
       <view class="tit">
-        藏宝阁
+        <view class="titText">藏宝阁</view>
         <image class="border" src="/pages/images/border.png" />
       </view>
       <view hover-class="active" class="transition">

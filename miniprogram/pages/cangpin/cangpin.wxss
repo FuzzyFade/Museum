@@ -26,6 +26,11 @@
     margin-top: 80px;
 }
 
+.titText {
+    width: 180px;
+    text-align: center;
+  }
+
 .head {
     display: flex;
     flex-direction: row;
