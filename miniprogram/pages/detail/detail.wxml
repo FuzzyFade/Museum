@@ -1,8 +1,27 @@
 <navigationBar text="展览详情" />
 <view class="contain">
   <view class="content" style="margin-top: {{navigationBarHeight}}">
-    <image class="picture" src="{{cont.img}}" />
-    {{cont.name}}
+    <view class="picture">
+      <image class="picture" src="{{cont.img}}" mode="aspectFill" />
+    </view>
+    <view class="detail-title">{{cont.name}}</view>
+    <view class="detail-outline">
+      <view>{{cont.time}}</view>
+      <view>{{cont.location}}</view>
+    </view>
+    <view class="detail-description">{{cont.intro}}</view>
+    <view class="detail-area">
+      <view class="detailTitle">
+        <image class="cloud" src="/pages/images/cloud.png" />
+        展品详情
+        <image class="cloud" style="transform: rotateY(180deg);" src="/pages/images/cloud.png" />
+      </view>
+      <view class="detailContent">{{cont.detail}}</view>
+      <view class="detailTitle">
+        <image class="cloud" style="transform: rotateX(180deg);" src="/pages/images/cloud.png" />
+        <image class="cloud" style="transform: rotateX(180deg) rotateY(180deg)" src="/pages/images/cloud.png" />
+      </view>
+    </view>
   </view>
   <image class="background" src="/pages/images/bg.png" />
 </view>

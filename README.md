@@ -31,7 +31,7 @@ miniprograme
 ## Pages list
 
 + [x] 藏品阁&藏品详细 ( over )
-+ [ ] 展览 ( 待测... )
++ [x] 展览 ( 待测... )
 + [ ] 创作台 ( await )
 
 
@@ -41,6 +41,6 @@ miniprograme
 + [x] 展览回顾
 + [x] 优化藏品阁
 + [x] 优化choose-bar样式
-+ [ ] 展览详情
++ [x] 展览详情
 + [ ] 创作台 nav-bar 替换
 + [ ] 创作台 base64 替换

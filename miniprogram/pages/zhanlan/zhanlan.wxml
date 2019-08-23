@@ -16,6 +16,7 @@
       interval="{{7000}}" 
       duration="{{duration}}" 
       circular="{{true}}" 
+      current="{{current}}"
       bindchange="onItemChange" 
     >
       <view wx:for="{{list}}" >
